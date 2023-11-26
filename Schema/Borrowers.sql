@@ -10,9 +10,9 @@ GO
 
 CREATE TABLE [dbo].[Borrowers](
 	[Borrower ID] [int] IDENTITY(1,1) NOT NULL,
-	[First Name] [varchar](50) NOT NULL,
-	[Last Name] [varchar](50) NOT NULL,
-	[Email] [varchar](50) NOT NULL,
+	[First Name] [varchar](255) NOT NULL,
+	[Last Name] [varchar](255) NOT NULL,
+	[Email] [varchar](255) UNIQUE NOT NULL CHECK (Email LIKE '%_@_%._%'),
 	[Date of Birth] [date] NOT NULL,
 	[Membership Date] [date] NOT NULL,
  CONSTRAINT [PK_Borrowers] PRIMARY KEY CLUSTERED 

@@ -11,8 +11,8 @@ GO
 CREATE TABLE [dbo].[Books](
 	[Book ID] [int] IDENTITY(1,1) NOT NULL,
 	[Title] [varchar](255) NOT NULL,
-	[Author] [varchar](50) NOT NULL,
-	[ISBN] [varchar](17) NOT NULL,
+	[Author] [varchar](255) NOT NULL,
+	[ISBN] [varchar](17) UNIQUE NOT NULL,
 	[Published] [date] NOT NULL,
 	[Genre] [varchar](50) NOT NULL,
 	[Shelf Location] [varchar](50) NOT NULL,
